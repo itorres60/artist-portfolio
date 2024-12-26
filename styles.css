@@ -1,0 +1,38 @@
+/* * {
+  border: 1px solid gray;
+  margin: 5px;
+} */
+
+body {
+  background-image: url(./images/executive.jpeg);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+
+header {
+  font-size: 48px;
+  text-align: center;
+  background-color: rgb(255 255 255);
+  border-radius: 25px;
+  margin-bottom: 15px;
+  position: fixed;
+  top: 10px;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 100px auto;
+  width: 90%;
+  grid-gap: 20px;
+}
+
+img {
+  max-width: 400px;
+  border-radius: 25px;
+  box-shadow: 0 0 30px white;
+}
