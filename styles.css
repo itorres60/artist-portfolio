@@ -7,32 +7,76 @@ body {
   background-image: url(./images/executive.jpeg);
   background-size: 100vw 100vh;
   background-attachment: fixed;
+  margin: 0;
 }
 
 header {
   font-size: 48px;
   text-align: center;
   background-color: rgb(255 255 255);
-  border-radius: 25px;
   margin-bottom: 15px;
   position: fixed;
-  top: 10px;
+  left: 0px;
+  top: 0;
   width: 100%;
 }
 
+.photo-1{grid-area: one;}
+.photo-2{grid-area: five;}
+.location{grid-area: six;}
+.photo-3{grid-area: four;}
+.contact{grid-area: three;}
+.intro{grid-area: two;}
+
 .content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  background-color: rgb(0 0 0 / 75%);
+  border-radius: 50px;
+  max-width: fit-content;
+  margin: 100px auto;
+  padding: 100px;
+  display: grid;
+  grid-template: 
+    'one one two two'
+    'three three four four'
+    'five five six six';
+    grid-gap: 20px;
   justify-content: space-evenly;
   align-items: center;
-  margin: 100px auto;
-  width: 90%;
-  grid-gap: 20px;
+}
+
+.contact, .intro, .location{
+  text-align: center;
+  align-content: center;
+  height: 250px;
+  width: 400px;
+  background-color: rgb(255 255 255 / 80%);
+  border-radius: 25px;
 }
 
 img {
-  max-width: 400px;
+  width: 400px;
   border-radius: 25px;
   box-shadow: 0 0 30px white;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .content {
+    background-color: rgb(0 0 0 / 75%);
+    margin: 75px auto;
+    width: min-content ;
+    display: grid;
+    grid-template: 
+      'one one'
+      'two two'
+      'three three'
+      'four four'
+      'five five'
+      'six six';
+  }
+
+  #item, img {
+    width: 50%;
+    min-width: 300px;
+  }
 }
